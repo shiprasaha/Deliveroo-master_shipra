@@ -7,6 +7,7 @@ using Xunit;
 
 namespace Deliveroo.CronTests.CronNotationParsers
 {
+    //This class contains test cases for range notation parsing
     public class RangeNotationParserTests
     {
         private readonly RangeNotationParser _sut;

@@ -4,6 +4,7 @@ using Xunit;
 
 namespace Deliveroo.CronTests.FactoryTests
 {
+    //This class contains test cases to check correct applicable parser
     public class FactoryTests
     {
         private readonly ParserFactory _sut;

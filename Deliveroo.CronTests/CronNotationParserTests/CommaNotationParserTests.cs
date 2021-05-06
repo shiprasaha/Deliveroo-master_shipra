@@ -7,6 +7,7 @@ using Xunit;
 
 namespace Deliveroo.CronTests.CronNotationParsers
 {
+    //This class contains test cases for comma notation parsing
     public class CommaNotationParserTests
     {
         private readonly CommaNotationParser _sut;

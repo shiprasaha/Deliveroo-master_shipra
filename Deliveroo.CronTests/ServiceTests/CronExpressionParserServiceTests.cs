@@ -5,6 +5,7 @@ using Xunit;
 
 namespace Deliveroo.CronTests
 {
+    //This class contains test cases for parsing the input.
     public class CronExpressionParserServiceTests
     {
         private CronExpressionParserService _sut;

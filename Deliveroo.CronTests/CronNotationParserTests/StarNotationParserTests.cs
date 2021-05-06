@@ -5,6 +5,7 @@ using Xunit;
 
 namespace Deliveroo.CronTests.CronNotationParsers
 {
+    //This class contains test cases for star notation parsing
     public class StarNotationParserTests
     {
         private readonly StarNotationParser _sut;

@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Deliveroo.Cron
 {
+    //This class formats to the CronExpression result to the desired response.
     public class CronExpressionResultFormatter
     {
         public string Format(CronExpressionResult result)

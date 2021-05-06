@@ -5,6 +5,7 @@ using Xunit;
 
 namespace Deliveroo.CronTests.CronExpressionParserTests
 {
+    //This class contains test cases to test input string
     public class CronExpressionParserTests
     {
         private CronApplicationController _sut;

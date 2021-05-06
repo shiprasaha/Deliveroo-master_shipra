@@ -6,6 +6,8 @@ using Xunit;
 
 namespace Deliveroo.CronTests.CronNotationParsers
 {
+    //This class contains test cases for interval notation parsing
+
     public class IntervalNotationParserTests
     {
         private readonly IntervalNotationParser _sut;
