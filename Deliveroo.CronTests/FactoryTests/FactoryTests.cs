@@ -27,7 +27,7 @@ namespace Deliveroo.CronTests.FactoryTests
         {
             string input = "*/5";
             var result = _sut.GetApplicableParser(input);
-            result.GetType().Equals(typeof(StarNotationParser));
+            result.GetType().Equals(typeof(IntervalNotationParser));
         }
         
         [Fact]
@@ -35,7 +35,7 @@ namespace Deliveroo.CronTests.FactoryTests
         {
             string input = "1-5";
             var result = _sut.GetApplicableParser(input);
-            result.GetType().Equals(typeof(StarNotationParser));
+            result.GetType().Equals(typeof(RangeNotationParser));
         }
 
         [Fact]
@@ -43,7 +43,7 @@ namespace Deliveroo.CronTests.FactoryTests
         {
             string input = "5";
             var result = _sut.GetApplicableParser(input);
-            result.GetType().Equals(typeof(StarNotationParser));
+            result.GetType().Equals(typeof(SimpleCronNotationParser));
         }
 
         [Fact]
@@ -51,15 +51,15 @@ namespace Deliveroo.CronTests.FactoryTests
         {
             string input = "1,5";
             var result = _sut.GetApplicableParser(input);
-            result.GetType().Equals(typeof(StarNotationParser));
+            result.GetType().Equals(typeof(CommaNotationParser));
         }
 
         [Fact]
         public void GetApplicableParser_WhenInputStringIsInvalid_ReturnsObjectOfInvalidNotationParser()
         {
-            string input = "1-3*";
+            string input = "1-5-2";
             var result = _sut.GetApplicableParser(input);
-            result.GetType().Equals(typeof(StarNotationParser));
+            Assert.Null(result);
         }
 
     }
